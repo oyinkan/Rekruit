@@ -235,7 +235,17 @@
         <div class="col-md-8">
           <div class="companies-div no-border">
             <div class="">
-              <a href="" class="write"><i class="fa fa-edit"></i> Write your post</a>
+              <a class="write"><i class="fa fa-edit"></i> Write your post</a>
+              <div>
+                <form id="post-form">
+                  <div class="form-group">
+                    <textarea class="form-control" rows="5" id="post" placeholder="Post something"></textarea>
+                  </div>
+                  <div class="text-right">
+                    <button class="btn btn-info">SEND</button>
+                  </div>
+                </form>
+              </div>
               <div class="create-div">
                 <i class="fa fa-photo pull-left"></i>
                 <hr>
@@ -281,7 +291,7 @@
               <div>
                 <div class="pull-left">
                   <i class="fa fa-thumbs-up"></i>&emsp;
-                  <i class="fa fa-comments"></i>&emsp;
+                  <i class="fa fa-comments comment"></i>&emsp;
                   <i class="fa fa-share-alt-square"></i>&emsp;
                 </div>
                 <div class="pull-right">
@@ -290,6 +300,17 @@
                 </div>
               </div>
               <div class="clear"></div>
+              <div>
+                <form id="comment-form">
+                  <div class="form-group">
+                    <label for="">Your comment</label>
+                    <textarea class="form-control" rows="5" id="comment" placeholder="Post something"></textarea>
+                  </div>
+                  <div class="text-right">
+                    <button class="btn btn-info">POST</button>
+                  </div>
+                </form>
+              </div>
             </div>           
           </div>
 
@@ -377,6 +398,14 @@
   <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
   <!-- Argon JS -->
   <script src="./assets/js/argon.js?v=1.0.1"></script>
+  <script>
+    $(".write").click(function(){
+      $("#post-form").show();
+    });
+    $(".comment").click(function(){
+      $("#comment-form").show();
+    });
+  </script>
 </body>
 
 </html>
